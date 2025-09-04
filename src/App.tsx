@@ -1,25 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Form } from 'react-bootstrap';
+import Label from './components/Label';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="mt-4">
+      <Form>
+        <Form.Group controlId="username">
+          <Label text="Username" htmlFor="username" required />
+          <Form.Control type="text" placeholder="Enter username" />
+        </Form.Group>
+      </Form>
+    </Container>
   );
 }
 
